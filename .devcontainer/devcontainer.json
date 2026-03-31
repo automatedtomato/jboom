@@ -1,0 +1,9 @@
+{
+  "name": "jboom",
+  "image": "oven/bun:latest",
+  "workspaceFolder": "/home/bun/app",
+  "mounts": [
+    "source=${localWorkspaceFolder},target=/workspace,type=bind"
+  ],
+  "remoteUser": "bun"
+}
