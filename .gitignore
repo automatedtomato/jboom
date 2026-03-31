@@ -1,5 +1,6 @@
 # Internal documents
 tasks/learn_ts
+.sandbox
 
 # Development shell
 dev.sh
