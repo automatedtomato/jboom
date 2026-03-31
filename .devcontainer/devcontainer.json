@@ -3,7 +3,8 @@
   "image": "oven/bun:latest",
   "workspaceFolder": "/home/bun/app",
   "mounts": [
-    "source=${localWorkspaceFolder},target=/workspace,type=bind"
+    "source=${localWorkspaceFolder},target=/home/bun/app,type=bind"
   ],
-  "remoteUser": "bun"
+  "initializeCommand": "chmod -R a+rw ${localWorkspaceFolder}",
+  "remoteUser": "bun",
 }

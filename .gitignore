@@ -3,3 +3,10 @@ tasks/learn_ts
 
 # Development shell
 dev.sh
+
+# Environment
+.env
+
+# Bun Dependencies
+node_modules/
+
