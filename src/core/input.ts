@@ -2,9 +2,9 @@ import { parse as parseYaml } from "yaml";
 
 const SUPPORTED_FORMAT = new Set(["json", "yaml"]);
 
-const assertNever = (_x: never) => {
+function assertNever(_x: never): never {
 	throw new Error(`Input format must be one of ${SUPPORTED_FORMAT}, got ${_x}`);
-};
+}
 
 export function parseInput(raw: string, format: "json" | "yaml"): unknown {
 	switch (format) {
