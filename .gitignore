@@ -10,4 +10,4 @@ dev.sh
 
 # Bun Dependencies
 node_modules/
-
+biome.json

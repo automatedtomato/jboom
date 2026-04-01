@@ -1,10 +1,8 @@
 {
-  "name": "jboom",
-  "image": "oven/bun:latest",
-  "workspaceFolder": "/home/bun/app",
-  "mounts": [
-    "source=${localWorkspaceFolder},target=/home/bun/app,type=bind"
-  ],
-  "initializeCommand": "chmod -R a+rw ${localWorkspaceFolder}",
-  "remoteUser": "bun",
+	"name": "jboom",
+	"image": "oven/bun:latest",
+	"workspaceFolder": "/home/bun/app",
+	"mounts": ["source=${localWorkspaceFolder},target=/home/bun/app,type=bind"],
+	"initializeCommand": "chmod -R a+rw ${localWorkspaceFolder}",
+	"remoteUser": "bun"
 }
