@@ -11,7 +11,7 @@ export function parseToTree(input: unknown, rootKey?: string): TreeNode[] {
   if (typeof input === "object" && input !== null) {
     const obj = input as Record<string, unknown>;
     const children = Object.entries(obj)
-      .map((k, v) => parseToTree(v, String(k))[0])
+      .map(([k, v]) => parseToTree(v, k)[0])
       .filter((n): n is TreeNode => n !== undefined);
     return [{ kind: "object", key, children, expanded: true}];
   }
