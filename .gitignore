@@ -11,3 +11,7 @@ dev.sh
 # Bun Dependencies
 node_modules/
 biome.json
+
+# Log file
+log
+*.log
