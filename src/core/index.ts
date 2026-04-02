@@ -1,3 +1,4 @@
+export { flatten } from "./flatten";
 export { parseInput } from "./input";
 export { parseToTree } from "./parse";
-export type { JsonPrimitive, TreeNode } from "./types";
+export type { FlatRow, JsonPrimitive, TreeNode } from "./types";

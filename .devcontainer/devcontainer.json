@@ -4,5 +4,6 @@
 	"workspaceFolder": "/home/bun/app",
 	"mounts": ["source=${localWorkspaceFolder},target=/home/bun/app,type=bind"],
 	"initializeCommand": "chmod -R a+rw ${localWorkspaceFolder}",
-	"remoteUser": "bun"
+	"remoteUser": "bun",
+	"postCreateCommand": "bun add -D -E @biomejs/biome"
 }
