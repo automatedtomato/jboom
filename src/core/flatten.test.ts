@@ -1,8 +1,36 @@
 import { expect, test } from "bun:test";
 import { flatten } from "./flatten";
-import type { TreeNode } from "./types";
+import type { FlatRow, TreeNode } from "./types";
 
 test("leaf only", () => {
-	const nodes: TreeNode[] = [{ kind: "leaf", key: "x", value: 1 }];
-	expect(flatten(nodes)).toEqual([{ node: nodes[0], depth: 0 }]);
+	const leaf: TreeNode = { kind: "leaf", key: "x", value: 1 };
+	const nodes: TreeNode[] = [leaf];
+	expect(flatten(nodes)).toEqual([{ node: leaf, depth: 0 }]);
+});
+
+test("expanded obj show children", () => {
+	const child: TreeNode = { kind: "leaf", key: "a", value: 1 };
+	const root: TreeNode = {
+		kind: "object",
+		key: "root",
+		children: [child],
+		expanded: true,
+	};
+	const rows: FlatRow[] = flatten([root]);
+	expect(rows).toEqual([
+		{ node: root, depth: 0 },
+		{ node: child, depth: 1 },
+	]);
+});
+
+test("collapsed object hides children", () => {
+	const child: TreeNode = { kind: "leaf", key: "a", value: 1 };
+	const root: TreeNode = {
+		kind: "object",
+		key: "root",
+		children: [child],
+		expanded: false,
+	};
+	const rows: FlatRow[] = flatten([root]);
+	expect(rows).toEqual([{ node: root, depth: 0 }]);
 });
