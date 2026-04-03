@@ -2,6 +2,7 @@
 	"name": "Alice",
 	"score": [10, 20],
 	"meta": {
-		"active": true
+		"active": true,
+		"valid": false
 	}
 }
