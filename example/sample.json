@@ -1,0 +1,8 @@
+{
+	"name": "Alice",
+	"score": [10, 20],
+	"meta": {
+		"active": true,
+		"valid": false
+	}
+}
