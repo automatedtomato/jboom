@@ -5,9 +5,9 @@ const data = JSON.parse(raw);
 const tree = parseToTree(data);
 console.log(JSON.stringify(tree, null, 2));
 
-const formats: Array<["json" | "yaml", string]> = [
-	["json", '{"name": "Alice", "scores": [10, 20]}'],
-	["yaml", "name: Bob\nscores:\n  - 30\n  - 40"],
+const formats: Array<[".json" | ".yaml", string]> = [
+	[".json", '{"name": "Alice", "scores": [10, 20]}'],
+	[".yaml", "name: Bob\nscores:\n  - 30\n  - 40"],
 ];
 
 for (const [format, raw] of formats) {

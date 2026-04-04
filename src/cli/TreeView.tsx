@@ -9,8 +9,8 @@ export function TreeView({ nodes }: TreeProps) {
 	const rows = flatten(nodes);
 	return (
 		<Box flexDirection="column">
-			{rows.map((row, key) => (
-				<NodeRow key={key} row={row} />
+			{rows.map((row) => (
+				<NodeRow key={row.path} row={row} />
 			))}
 		</Box>
 	);

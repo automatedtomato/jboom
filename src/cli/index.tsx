@@ -1,4 +1,4 @@
-import { Box, render, Text } from "ink";
+import { render } from "ink";
 import { App } from "./App";
 
 const args: string[] = process.argv.slice(2);

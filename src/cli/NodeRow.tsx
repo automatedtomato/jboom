@@ -15,9 +15,6 @@ export function NodeRow({ row }: RowProps) {
 	if (node.kind === "leaf") {
 		marker = "-";
 		label = `${node.key}: ${String(node.value)}`;
-	} else if (node.kind === "array") {
-		marker = node.expanded ? "▼" : "▶";
-		label = `${String(node.key)}`;
 	} else {
 		marker = node.expanded ? "▼" : "▶";
 		label = `${node.key}`;
